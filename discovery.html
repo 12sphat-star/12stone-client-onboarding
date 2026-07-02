@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discovery Session | 12 Stone Consulting</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="discovery-page">
+
+<div class="form-shell">
+  <div class="form-card">
+
+    <header class="form-header">
+      <a href="index.html" class="back-home">← Back to Overview</a>
+      <p class="eyebrow">12 Stone Consulting</p>
+      <h1>Smart Website Discovery Session</h1>
+      <p>Help us understand your business so we can prepare the right website proposal.</p>
+    </header>
+
+    <div class="progress-area">
+      <div class="progress-meta">
+        <span id="stepLabel">Step 1 of 9</span>
+        <span id="stepTitle">Business Information</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+   <form id="discoveryForm" novalidate>
+
+      <section class="form-step active" data-title="Business Information">
+        <h2>Business Information</h2>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Business Name *</label>
+            <input type="text" name="businessName" required>
+          </div>
+          <div class="field">
+            <label>Owner / Primary Contact *</label>
+            <input type="text" name="ownerName" required>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Email *</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="field">
+            <label>Phone *</label>
+            <input type="tel" name="phone" required>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Current Website</label>
+            <input type="url" name="currentWebsite" placeholder="https://">
+          </div>
+          <div class="field">
+            <label>Business Type</label>
+            <select name="businessType">
+              <option value="">Select one</option>
+              <option>KonnectMD Ambassador</option>
+              <option>Healthcare</option>
+              <option>Realtor</option>
+              <option>Insurance</option>
+              <option>Consultant</option>
+              <option>Contractor</option>
+              <option>Retail</option>
+              <option>Professional Services</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-step" data-title="About Your Business">
+        <h2>About Your Business</h2>
+
+        <div class="field">
+          <label>Why did you start your business?</label>
+          <textarea name="whyStarted"></textarea>
+        </div>
+
+        <div class="field">
+          <label>What products or services do you offer?</label>
+          <textarea name="services"></textarea>
+        </div>
+
+        <div class="field">
+          <label>What makes your business different?</label>
+          <textarea name="differentiator"></textarea>
+        </div>
+      </section>
+
+      <section class="form-step" data-title="Service Area">
+        <h2>Service Area</h2>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Primary Market</label>
+            <select name="primaryMarket">
+              <option value="">Select one</option>
+              <option>Local</option>
+              <option>Multiple Cities</option>
+              <option>Regional</option>
+              <option>Statewide</option>
+              <option>Nationwide</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Primary City</label>
+            <input type="text" name="primaryCity">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Additional Cities Served</label>
+          <input type="text" name="additionalCities">
+        </div>
+
+        <div class="field">
+          <label>If you could dominate one city online, which city would it be?</label>
+          <input type="text" name="targetCity">
+        </div>
+      </section>
+
+      <section class="form-step" data-title="Brand Direction">
+        <h2>Brand Direction</h2>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Brand Name to Display</label>
+            <input type="text" name="brandName">
+          </div>
+          <div class="field">
+            <label>Preferred Website Style</label>
+            <select name="websiteStyle">
+              <option value="">Select one</option>
+              <option>Professional</option>
+              <option>Modern</option>
+              <option>Luxury</option>
+              <option>Friendly</option>
+              <option>Bold</option>
+              <option>Minimal</option>
+              <option>Faith-Based</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Primary Brand Color</label>
+            <input type="text" name="primaryColor" placeholder="Example: Navy blue">
+          </div>
+          <div class="field">
+            <label>Secondary Brand Color</label>
+            <input type="text" name="secondaryColor" placeholder="Example: Gold">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Websites you like</label>
+          <textarea name="likedWebsites"></textarea>
+        </div>
+      </section>
+
+      <section class="form-step" data-title="Website Goals">
+        <h2>Website Goals</h2>
+
+        <p class="step-note">Select all that apply.</p>
+
+        <div class="checkbox-grid">
+          <label><input type="checkbox" name="websiteGoals" value="Generate Leads"> Generate Leads</label>
+          <label><input type="checkbox" name="websiteGoals" value="Book Appointments"> Book Appointments</label>
+          <label><input type="checkbox" name="websiteGoals" value="Educate Customers"> Educate Customers</label>
+          <label><input type="checkbox" name="websiteGoals" value="Build Credibility"> Build Credibility</label>
+          <label><input type="checkbox" name="websiteGoals" value="Showcase Services"> Showcase Services</label>
+          <label><input type="checkbox" name="websiteGoals" value="Recruit Team Members"> Recruit Team Members</label>
+          <label><input type="checkbox" name="websiteGoals" value="Share Resources"> Share Resources</label>
+          <label><input type="checkbox" name="websiteGoals" value="Other"> Other</label>
+        </div>
+      </section>
+
+      <section class="form-step" data-title="Website Features">
+        <h2>Website Features</h2>
+
+        <p class="step-note">Select the pages or features you may need.</p>
+
+        <div class="checkbox-grid">
+          <label><input type="checkbox" name="features" value="Home Page"> Home Page</label>
+          <label><input type="checkbox" name="features" value="About Page"> About Page</label>
+          <label><input type="checkbox" name="features" value="Services Page"> Services Page</label>
+          <label><input type="checkbox" name="features" value="Contact Page"> Contact Page</label>
+          <label><input type="checkbox" name="features" value="FAQ"> FAQ</label>
+          <label><input type="checkbox" name="features" value="Testimonials"> Testimonials</label>
+          <label><input type="checkbox" name="features" value="Blog"> Blog</label>
+          <label><input type="checkbox" name="features" value="Photo Gallery"> Photo Gallery</label>
+          <label><input type="checkbox" name="features" value="Video Section"> Video Section</label>
+          <label><input type="checkbox" name="features" value="Calendly Integration"> Calendly Integration</label>
+          <label><input type="checkbox" name="features" value="Google Map"> Google Map</label>
+          <label><input type="checkbox" name="features" value="Downloadable Resources"> Downloadable Resources</label>
+        </div>
+      </section>
+
+      <section class="form-step" data-title="Scheduling & Tools">
+        <h2>Scheduling & Tools</h2>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Do you use Calendly?</label>
+            <select name="usesCalendly">
+              <option value="">Select one</option>
+              <option>Yes</option>
+              <option>No</option>
+              <option>Need Help Setting It Up</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Calendly Link</label>
+            <input type="url" name="calendlyLink" placeholder="https://calendly.com/...">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Do you have content, images, or logo files ready?</label>
+          <select name="assetsReady">
+            <option value="">Select one</option>
+            <option>Yes, I have everything ready</option>
+            <option>I have some items ready</option>
+            <option>No, I will need help</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="form-step" data-title="Future Growth">
+        <h2>Future Growth</h2>
+
+        <p class="step-note">These are optional future services. This helps us understand what may be useful later.</p>
+
+        <div class="field-row">
+          <div class="field">
+            <label>AI Website Assistant</label>
+            <select name="aiWebsiteAssistant">
+              <option>Not At This Time</option>
+              <option>Interested</option>
+              <option>Maybe Later</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Voice Concierge</label>
+            <select name="voiceConcierge">
+              <option>Not At This Time</option>
+              <option>Interested</option>
+              <option>Maybe Later</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Google Review Automation</label>
+            <select name="googleReviewAutomation">
+              <option>Not At This Time</option>
+              <option>Interested</option>
+              <option>Maybe Later</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Business Growth Platform</label>
+            <select name="businessGrowthPlatform">
+              <option>Not At This Time</option>
+              <option>Interested</option>
+              <option>Maybe Later</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-step" data-title="Final Notes">
+        <h2>Final Notes</h2>
+
+        <div class="field">
+          <label>What is the most important thing this website needs to accomplish?</label>
+          <textarea name="mostImportantGoal"></textarea>
+        </div>
+
+        <div class="field">
+          <label>Anything else we should know?</label>
+          <textarea name="finalNotes"></textarea>
+        </div>
+
+        <label class="agreement">
+          <input type="checkbox" name="acknowledgement" required>
+          I understand this Discovery Session will be used to prepare a customized website proposal.
+        </label>
+      </section>
+
+      <div class="form-actions">
+        <button type="button" class="secondary-btn" id="prevBtn">Back</button>
+        <button type="button" class="primary-form-btn" id="nextBtn">Next</button>
+        <button type="submit" class="primary-form-btn" id="submitBtn">Submit Discovery</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
