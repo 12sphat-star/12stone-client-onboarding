@@ -10,7 +10,7 @@ const progressFill = document.getElementById("progressFill");
 let currentStep = 0;
 
 const WEBHOOK_URL =
-  "https://services.leadconnectorhq.com/hooks/E6kJjCkXCeOgpU5OhZJh/webhook-trigger/9af9b0c5-d79a-487b-958d-ddafbb0bf99d";
+   "https://script.google.com/macros/s/AKfycbxDf4T5mhiUVYDTuA_gGOfi4vHsu-zMvxvAMqhDvcLVJz6FAFa-3lteCSZHW_AywuYm/exec";
 
 function updateStep() {
   steps.forEach((step, index) => {
@@ -117,21 +117,31 @@ form.addEventListener("submit", async (event) => {
 
   console.log("12 Stone Discovery Submission:", data);
 
-  try {
-    await fetch(WEBHOOK_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
+try {
+  const response = await fetch(WEBHOOK_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "text/plain;charset=utf-8"
+    },
+    body: JSON.stringify(data)
+  });
 
-    sessionStorage.setItem("discoverySubmission", JSON.stringify(data));
-    window.location.assign("thank-you.html");
-  } catch (error) {
-    console.error("Submission error:", error);
-    alert("There was a problem submitting your discovery session. Please try again.");
-  }
+  console.log("Google Sheet submission sent successfully.");
+
+  sessionStorage.setItem(
+    "discoverySubmission",
+    JSON.stringify(data)
+  );
+
+  window.location.assign("thank-you.html");
+
+} catch (error) {
+  console.error("Submission error:", error);
+
+  alert(
+    "There was a problem submitting your discovery session. Please try again."
+  );
+}
 });
 
 updateStep();
